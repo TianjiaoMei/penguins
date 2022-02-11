@@ -1,0 +1,37 @@
+---
+title: "single_trait.Rmd"
+author: "Tianjiao Mei"
+date: "2/11/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r,message=FALSE}
+library(palmerpenguins)
+library(tidyverse)
+```
+
+## Single trait distribution
+
+```{r, message=FALSE, warning=FALSE}
+ggplot(data = penguins) +
+  geom_density(mapping = aes(x = bill_length_mm, color = species))
+```
+
+```{r, message=FALSE, warning=FALSE}
+penguins %>%
+  ggplot() +
+  geom_density(mapping = aes(x = bill_length_mm, fill = species), alpha = 0.5)
+```
+
+
+
+
+
+
+
+
+

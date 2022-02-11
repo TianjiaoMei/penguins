@@ -1,0 +1,24 @@
+name: "Pinguinnos"
+navbar:
+  title: "Penguin Data"
+  left:
+    - text: "About"
+      href: index.html
+    - text: "Analyses"
+      menu:
+      - text: "Single Trait Analysis"
+        href: single_trait.html
+      - text: "Multi Trait Analysis"
+        href: multiple_traits.html
+      - text: "Sexual Dimorphisms"
+        href: sexual_dimorphism.html
+      
+output_dir: "."
+output:
+  html_document:
+    theme: sandstone
+    highlight: textmate
+    toc: true 
+    toc_float: true 
+    
+    

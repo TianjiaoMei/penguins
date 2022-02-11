@@ -1,0 +1,32 @@
+---
+title: "multiple_traits.Rmd"
+author: "Tianjiao Mei"
+date: "2/11/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r,message=FALSE}
+library(palmerpenguins)
+library(tidyverse)
+```
+
+## Relationship between multiple traits
+```{r, message=FALSE, warning=FALSE}
+penguins %>%
+  ggplot() +
+  geom_smooth(mapping = aes(x = body_mass_g, y = flipper_length_mm, color = species))
+```
+
+```{r, message=FALSE, warning=FALSE}
+penguins %>%
+  ggplot(mapping = aes(x = body_mass_g, y = flipper_length_mm, color = species)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+
+
